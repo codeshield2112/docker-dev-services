@@ -7,10 +7,10 @@ services:
     #volumes:
     #  - ./rabbitmq/config/rabbitmq.confog:/etc/rabbitmq/rabbitmq.config:ro
     #  - ./rabbitmq/data:/var/lib/rabbitmq/mnesia/rabbit@my-rabbit
-    #environment:
-    # RABBITMQ_DEFAULT_USER
-    # RABBITMQ_DEFAULT_PASS
-    # RABBITMQ_DEFAULT_VHOST
+    environment:
+      - RABBITMQ_DEFAULT_USER=pvRetailDev
+      - RABBITMQ_DEFAULT_PASS=pvRetailDev
+      - RABBITMQ_DEFAULT_VHOST=ParcelVision.Retail
     ports:
       - 5672:5672
       - 15672:15672
