@@ -1,15 +1,20 @@
-version: '2'
+version: '3'
 
 services:
 
-  rabbitmq:
+  sqlserver:
     image: mcr.microsoft.com/mssql/server:${SQLSERVER_VERSION}
-    #volumes:
-    #  - ./mssql/data:/var/opt/mssql
-    environment:
-      - ACCEPT_EULA=Y
-      - SA_PASSWORD=<strong password goes here>
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+    env_file:
+      - compose-sqlserver.env
+      - compose-sqlserver.env.local
     ports:
       - 1433:1433
     networks:
       - svcnet
+
+volumes:
+
+  sqlserver-data:
+    driver: local
