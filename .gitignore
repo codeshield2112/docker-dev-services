@@ -5,6 +5,7 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 .ionide/
+.fake
 
 # Local service sets definitions and environment
 /service-sets/*.local.yaml
