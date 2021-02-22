@@ -1,0 +1,5 @@
+set: pvq_min
+services:
+  - elasticsearch-7.9
+  - eventstore-5.0
+  - rabbitmq-3.8
